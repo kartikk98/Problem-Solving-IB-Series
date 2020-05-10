@@ -1,2 +1,3 @@
 # Problem-Solving-IB-Series
-InterviewBit Solutions
+Solving InterviewBit Problems.
+This repository consists of my solutions of InterviewBit problems in C++.
