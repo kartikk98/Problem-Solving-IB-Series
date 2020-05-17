@@ -14,7 +14,7 @@ int Solution::uniquePaths(int A, int B) {
     {
         for(int j=1;j<B;j++)
         {
-            dp[i][j] = dp[i-1][j] + dp[i][j-1];  //only allowing down and right pathh if diagonal path allowed the +dp[i-1][j-1]
+            dp[i][j] = dp[i-1][j] + dp[i][j-1];  //only allowing down and right paths if diagonal path allowed then +dp[i-1][j-1]
         }
     }
     return dp[A-1][B-1];
