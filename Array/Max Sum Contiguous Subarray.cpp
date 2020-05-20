@@ -1,3 +1,4 @@
+// Kadane's Algo
 int Solution::maxSubArray(const vector<int> &A) {
     int max = -1000, curSum = 0, n = A.size();
     for(int i=0;i<n;i++)
