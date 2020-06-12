@@ -14,23 +14,32 @@ int Solution::romanToInt(string s) {
     
     for(int i=n-1;i>=0;i--)
     {
-        if(i>0 && (s[i]=='V' || s[i]=='X') && s[i-1]=='I'){
-            ans += (m[s[i]]-1);
+        if(i>0 && m[s[i-1]] < m[s[i]])
+        {
+            ans += (m[s[i]] - m[s[i-1]]);
             i--;
         }
-        
-        else if(i>0 && (s[i]=='L' || s[i]=='C') && s[i-1]=='X'){
-            ans += (m[s[i]]-10);
-            i--;
-        }
-        
-        else if(i>0 && (s[i]=='D' || s[i]=='M') && s[i-1]=='C'){
-            ans += (m[s[i]]-100);
-            i--;
-        }
-        
         else
-            ans+=m[s[i]];
+            ans += m[s[i]];
+
+        /****  Same solution below but a little generalized in above solution  ****/
+        // if(i>0 && (s[i]=='V' || s[i]=='X') && s[i-1]=='I'){
+        //     ans += (m[s[i]]-1);
+        //     i--;
+        // }
+        
+        // else if(i>0 && (s[i]=='L' || s[i]=='C') && s[i-1]=='X'){
+        //     ans += (m[s[i]]-10);
+        //     i--;
+        // }
+        
+        // else if(i>0 && (s[i]=='D' || s[i]=='M') && s[i-1]=='C'){
+        //     ans += (m[s[i]]-100);
+        //     i--;
+        // }
+        
+        // else
+        //     ans+=m[s[i]];
     }
     return ans;
     
